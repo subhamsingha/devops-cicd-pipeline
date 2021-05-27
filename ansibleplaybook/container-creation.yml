@@ -1,0 +1,28 @@
+---
+- hosts: all
+# become: true
+
+  tasks:
+
+  - name: stop running container
+    command: docker stop simple-devops-container
+    ignore_errors: yes
+
+  - name: remove stopped container
+    command: docker rm simple-devops-container
+    ignore_errors: yes
+
+  - name: remove docker images
+    command: docker rmi ssingha/simple-devops-image:latest
+    ignore_errors: yes
+
+# - name: build docker images using war file.
+#   command: docker build -t simple-devops-image .
+#   args:
+#    chdir: /opt/docker
+
+  - name: pull the docker images from docker hub
+    command: docker pull ssingha/simple-devops-image:latest
+
+  - name: create container
+    command: docker run -d --name simple-devops-container -p 8090:8080 ssingha/simple-devops-image:latest
