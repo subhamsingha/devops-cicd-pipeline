@@ -11,3 +11,5 @@ Steps:
 •	Run Test cases & ensure they pass 
 •	Push the Docker image to the Docker Hub  
 •	Pull the image from Docker hub with the help to Ansible and deploy to Docker host and Tomcat server.
+
+Please refer DevOps Tool Installation Guide.docx to install the DevOps tools.
