@@ -1,3 +1,3 @@
-<h1> Hello, Welcome to Simple DevOps Project !!   </h1>
-<h2> Deploying on a VM</h2>
+<h1> Hello, Subham Singha !!   </h1>
+<h2> Deploying web application using Ansible</h2>
 
